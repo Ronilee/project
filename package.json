@@ -1,0 +1,23 @@
+{
+  "name": "cypress_qa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open": "./node_modules/.bin/cypress open",
+    "local_browser": "./node_modules/.bin/cypress run --headed",
+    "chrome": "./node_modules/.bin/cypress run -b chrome",
+    "report": "node cucumber-html-report.js",
+    "test": "npm run chrome && npm run report"
+  },
+  "author": "Roni Lee",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.5.0",
+    "cypress": "4.10.0",
+    "cypress-cucumber-preprocessor": "2.5.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
