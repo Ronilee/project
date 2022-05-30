@@ -1,4 +1,6 @@
 {
-    "testFiles": "**/*.feature",
-    "baseUrl": "http://localhost:3000/"
+  "testFiles": "**/*.feature",
+  "baseUrl": "https://www.saucedemo.com/",
+  "projectId": "2muxrn",
+  "chromeWebSecurity": false
 }

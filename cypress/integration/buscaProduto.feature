@@ -2,20 +2,25 @@ Feature: Feature name
 
     Acessar site Code shop
 
-    Scenario: Adicionar produto no carrinho e finalizar compra com cartão de credito
+    Scenario: Validar Login
         Given que acesso a pagina
-        And adicionar produto "Pokemom"
+        And acessar com usuario "standard_user" e senha "secret_sauce"
+        Then validar login efetuado com sucesso
+
+    Scenario: Validar Login invalido
+        Given que acesso a pagina
+        And acessar com usuario "standard_user" e senha "invalida"
+        Then validar login invalido
+
+
+    Scenario: Adicionar produto no carrinho e finalizar compra
+        Given que acesso a pagina
+        And acessar com usuario "standard_user" e senha "secret_sauce"
+        And adicionar produto ""
         And clicar no carrinho
-        And realizar login com usuario existente
+        And clicar em checkout
         And selecionar endereço
-        And selecionar forma de pagamento com cartão
+        And selecionar forma de pagamento
         Then validar mensagem de compra com sucesso
 
-    Scenario: Adicionar produto no carrinho e finalizar compra com boleto
-        Given que acesso a pagina
-        And adicionar produto "Star Wars"
-        And clicar no carrinho
-        And realizar login com usuario existente
-        And selecionar endereço
-        And selecionar forma de pagamento com boleto
-        Then validar mensagem de compra com sucesso
+    

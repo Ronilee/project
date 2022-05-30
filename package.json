@@ -15,7 +15,7 @@
   "devDependencies": {
     "cucumber-html-reporter": "^5.5.0",
     "cypress": "4.10.0",
-    "cypress-cucumber-preprocessor": "2.5.3"
+    "cypress-cucumber-preprocessor": "^2.5.3"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
